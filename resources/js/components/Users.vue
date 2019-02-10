@@ -133,10 +133,12 @@
         createUser() {
           this.$Progress.start();
           this.form.post('api/user');
-          toast({
+
+          Toast.fire({
             type: 'success',
-            title: 'User created!'
+            title: 'Created user successfully!'
           });
+
           this.$Progress.finish();
         }
       },

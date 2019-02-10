@@ -12,24 +12,29 @@ import moment from 'moment';
 import { Form, HasError, AlertError } from 'vform';
 
 window.form = Form;
-Vue.component(HasError.name, HasError)
-Vue.component(AlertError.name, AlertError)
+
+Vue.component(HasError.name, HasError);
+
+Vue.component(AlertError.name, AlertError);
 
 import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
 import VueProgressBar from 'vue-progressbar';
-import Swal from 'sweetalert2'
-window.Swal = Swal;
-const toast = Swal.mixin({
+
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+
+import 'sweetalert2/src/sweetalert2.scss'
+
+const Toast = Swal.mixin({
     toast: true,
     position: 'top-end',
     showConfirmButton: false,
     timer: 3000
 });
-  
-window.toast = toast;
+
+window.Toast = Toast;
 
 let routes = [
     { path: '/dashboard',  component: require('./components/Dashboard.vue').default },
