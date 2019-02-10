@@ -23,9 +23,9 @@ Vue.use(VueRouter);
 
 import VueProgressBar from 'vue-progressbar';
 
-import Swal from 'sweetalert2/dist/sweetalert2.js'
+import Swal from 'sweetalert2'
 
-import 'sweetalert2/src/sweetalert2.scss'
+window.Swal = Swal
 
 const Toast = Swal.mixin({
     toast: true,
